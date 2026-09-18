@@ -1,23 +1,23 @@
 # Jhosbert Osorio — Backend Developer
-**Resuelvo: pérdida de integridad de datos, procesos manuales frágiles y backends que fallan en producción.**
+**I solve: data integrity loss, fragile manual processes, and backends that break in production.**
 
-Construyo APIs en Python que protegen la lógica de negocio, automatizan operaciones críticas y están listas para escalar sin regresiones.
+I build Python APIs that protect business logic, automate critical operations, and ship production-ready without regressions.
 
-### Cómo trabajo
+### How I Work
 
-* **Diseño de APIs y Modelado:** Modelo la lógica de negocio primero. Priorizo consistencia transaccional y contratos claros, no endpoints improvisados.
-* **Mitigación de Errores y Validación:** Construyo defensas activas contra datos anómalos, estados inválidos y fallos de concurrencia.
-* **Calidad y QA:** Ninguna solución sale sin pruebas automatizadas con `pytest`. Cero regresiones en producción.
+* **API Design & Modeling:** Business logic first. I prioritize transactional consistency and clear contracts, not improvised endpoints.
+* **Error Mitigation & Validation:** I build active defenses against anomalous data, invalid states, and concurrency failures.
+* **Quality & QA:** Nothing ships without automated `pytest` coverage. Zero regressions in production.
 
-### Core Tecnológico — Herramientas con propósito
+### Core Stack — Tools With Purpose
 
-| Stack | Para qué lo uso | Valor de negocio |
+| Stack | What I use it for | Business Value |
 |---|---|---|
-| **Python + FastAPI** | APIs rápidas, tipadas y listas para producción | Menor time-to-market, menor costo de mantenimiento |
-| **SQLModel / Pydantic** | Validación estricta y modelado de dominio | Datos íntegros, menos bugs en lógica crítica |
-| **PostgreSQL / MySQL / SQLite** | Persistencia transaccional según escala | Consistencia garantizada de principio a fin |
-| **Pytest** | Testing automatizado de negocio y edge cases | Despliegues seguros, sin regresiones |
-| **Git** | Versionado limpio y trazable | Colaboración y auditoría sin fricción |
+| **Python + FastAPI** | Fast, typed, production-ready APIs | Faster time-to-market, lower maintenance cost |
+| **SQLModel / Pydantic** | Strict validation and domain modeling | Trusted data, fewer critical bugs |
+| **PostgreSQL / MySQL / SQLite** | Transactional persistence at the right scale | End-to-end consistency guaranteed |
+| **Pytest** | Automated testing for business logic & edge cases | Safe deploys, no regressions |
+| **Git** | Clean, traceable versioning | Frictionless collaboration and auditability |
 
 ---
-📬 **¿Hablemos de tu próximo sistema?** → [Conectemos en LinkedIn](www.linkedin.com/in/jhosbert-osorio-2680913b5).
+📬 **Let's talk about your next system?** → [Connect on LinkedIn](www.linkedin.com/in/jhosbert-osorio-2680913b5).
