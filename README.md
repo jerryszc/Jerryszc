@@ -1,23 +1,31 @@
-# Jhosbert Osorio — Backend Developer
-**I solve: data integrity loss, fragile manual processes, and backends that break in production.**
+I solve: data integrity loss, fragile manual processes, and backends that crash in production.
 
-I build Python APIs that protect business logic, automate critical operations, and ship production-ready without regressions.
+I build Python APIs that protect business logic, automate critical operations, and are production-ready with zero regressions.
 
-### How I Work
+## How I Work
 
-* **API Design & Modeling:** Business logic first. I prioritize transactional consistency and clear contracts, not improvised endpoints.
-* **Error Mitigation & Validation:** I build active defenses against anomalous data, invalid states, and concurrency failures.
-* **Quality & QA:** Nothing ships without automated `pytest` coverage. Zero regressions in production.
+* **API Design & Modeling:** Business logic comes first. I prioritize transactional consistency and clear contracts over improvised endpoints.
+* **Error Mitigation & Validation:** I build active defenses against anomalous data, invalid states, and concurrency issues.
+* **Quality & QA:** Nothing ships without automated coverage. Zero regressions in production (`pytest`).
 
-### Core Stack — Tools With Purpose
+## Core Stack — Tools with Purpose
 
-| Stack | What I use it for | Business Value |
-|---|---|---|
+| Stack | What I Use It For | Business Value |
+| :--- | :--- | :--- |
 | **Python + FastAPI** | Fast, typed, production-ready APIs | Faster time-to-market, lower maintenance cost |
-| **SQLModel / Pydantic** | Strict validation and domain modeling | Trusted data, fewer critical bugs |
+| **SQLModel / Pydantic** | Strict validation and domain modeling | Trusted data, fewer critical errors |
 | **PostgreSQL / MySQL / SQLite** | Transactional persistence at the right scale | End-to-end consistency guaranteed |
-| **Pytest** | Automated testing for business logic & edge cases | Safe deploys, no regressions |
-| **Git** | Clean, traceable versioning | Frictionless collaboration and auditability |
+| **Docker / Docker Compose** | Containerization and production-parity | Predictable deployments and friction-free isolated environments |
+| **Pytest** | Automated tests for business logic and edge cases | Secure deployments, zero regressions |
+| **Git** | Clean and traceable version control | Frictionless collaboration and auditability |
 
----
-📬 **Let's talk about your next system?** → [Connect on LinkedIn](www.linkedin.com/in/jhosbert-osorio-2680913b5).
+## 🚀 Portfolio Projects
+
+* **[E-Commerce Backend API](https://github.com/jerryszc/ecommerce-backend-api)**
+  * **Problem it solves:** Automates commercial management, preventing inventory inconsistencies, order processing errors, and production crashes through a robust, containerized architecture.
+  * **Stack:** FastAPI, PostgreSQL, SQLModel, Alembic, Docker, and Pytest.
+  * **Enfoque:** Clean architecture, automated database migrations, strict schema validation, and environment parity with Docker Compose.
+
+## 📈 Let's Connect
+* GitHub: [@jerryszc](https://github.com/jerryszc)
+* LinkedIn: [Jhosbert Osorio](www.linkedin.com/in/jhosbert-osorio-2680913b5)
