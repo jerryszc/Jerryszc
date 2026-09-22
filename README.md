@@ -28,4 +28,4 @@ I build Python APIs that protect business logic, automate critical operations, a
 
 ## 📈 Let's Connect
 * GitHub: [@jerryszc](https://github.com/jerryszc)
-* LinkedIn: [Jhosbert Osorio](www.linkedin.com/in/jhosbert-osorio-2680913b5)
+* LinkedIn: [Jhosbert Osorio](https://www.linkedin.com/in/jhosbert-osorio-2680913b5)
