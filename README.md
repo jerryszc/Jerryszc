@@ -21,11 +21,24 @@ I build Python APIs that protect business logic, automate critical operations, a
 
 ## 🚀 Portfolio Projects
 
-* **[E-Commerce Backend API](https://github.com/jerryszc/ecommerce-backend-api)**
+All three ship with green CI: `ruff` + `mypy strict` + `pytest` + Docker build & smoke test.
+
+* **[E-Commerce Backend API](https://github.com/jerryszc/ecommerce-backend-api)** — 34 pytest passing, CI green
   * **Problem it solves:** Automates commercial management, preventing inventory inconsistencies, order processing errors, and production crashes through a robust, containerized architecture.
   * **Stack:** FastAPI, PostgreSQL, SQLModel, Alembic, Docker, and Pytest.
   * **Enfoque:** Clean architecture, automated database migrations, strict schema validation, and environment parity with Docker Compose.
 
+* **[SSO Webhook Service](https://github.com/jerryszc/sso-webhook-service)** — 16 pytest passing, CI green
+  * **Problem it solves:** Centralizes authentication (SSO) and guarantees event delivery through asynchronous webhooks with HMAC signatures, resilient retries, and a dead-letter queue.
+  * **Stack:** FastAPI, PostgreSQL, Redis, SQLModel, Alembic, Docker, and Pytest.
+  * **Enfoque:** Zero-trust security, strict typing (`mypy strict`), JWT + rate limiting, and containerized smoke tests.
+
+* **[Realtime Task API](https://github.com/jerryszc/Realtime-task-api)** — 11 pytest passing, 76% coverage, CI green
+  * **Problem it solves:** Enables real-time collaborative task management with strict access control across workspaces, boards, and tasks.
+  * **Stack:** FastAPI, PostgreSQL, SQLModel, WebSockets, RBAC, Docker, and Pytest.
+  * **Enfoque:** JWT authentication, owner/admin/member RBAC, native WebSocket broadcasting, and automated coverage.
+
 ## 📈 Let's Connect
 * GitHub: [@jerryszc](https://github.com/jerryszc)
 * LinkedIn: [Jhosbert Osorio](https://www.linkedin.com/in/jhosbert-osorio-2680913b5)
+* Email: [Jhosbertosorio@gmail.com](mailto:Jhosbertosorio@gmail.com)
