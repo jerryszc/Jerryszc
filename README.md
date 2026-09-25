@@ -1,12 +1,95 @@
-I solve: data integrity loss, fragile manual processes, and backends that crash in production.
+# Jhosbert Osorio
 
-I build Python APIs that protect business logic, automate critical operations, and are production-ready with zero regressions.
+**Backend Engineer** — Python • FastAPI • PostgreSQL • AWS • Distributed Systems
 
-## How I Work
+---
 
-* **API Design & Modeling:** Business logic comes first. I prioritize transactional consistency and clear contracts over improvised endpoints.
-* **Error Mitigation & Validation:** I build active defenses against anomalous data, invalid states, and concurrency issues.
-* **Quality & QA:** Nothing ships without automated coverage. Zero regressions in production (`pytest`).
+## About Me
+
+I build backend systems that are reliable, observable, and simple to operate. I care about correct abstractions, operational ownership, and code that survives production.
+
+Currently focused on: **distributed systems correctness**, **observability-driven development**, and **developer experience**.
+
+---
+
+## Selected Work
+
+### E-Commerce Inventory Automator
+[`jerryszc/ecommerce-inventory-automator`](https://github.com/jerryszc/ecommerce-inventory-automator) — Multi-channel inventory synchronization (Amazon/Shopify) with async processing, full observability, and zero-downtime deployments.
+
+**Problems solved:**
+
+| Business Problem | Technical Solution | Outcome |
+|------------------|-------------------|---------|
+| **Stock drift across channels** (Amazon says 10, Shopify says 8) | Last-write-wins sync with immutable ConflictLog; per-variant thresholds | Single source of truth; audit trail for every discrepancy |
+| **Manual CSV imports from suppliers** (hours, error-prone, blocks team) | S3 → SQS → Lambda worker; alias-tolerant parser; auto-creates catalog; deduplication | API responds in ~50ms; heavy lifting offline; error rows reported per row |
+| **No visibility into low stock until sale fails** | Per-variant thresholds; `/alerts/low-stock` with channel filter | Proactive replenishment; zero stock-outs from visibility gaps |
+| **Unauthorized changes / no audit trail** | JWT (HS256) + access/refresh rotation; RBAC (admin/operator); immutable ConflictLog | Least-privilege access; full audit trail for compliance |
+| **Blocking imports freeze the API** | S3 → SQS → Lambda worker pattern; API returns job ID instantly | API responds in <100ms; heavy lifting scales independently |
+| **No visibility into production behavior** | Structured JSON logs (structlog) → CloudWatch; Prometheus metrics; `/health/detailed` | Debugging in seconds, not hours; RED metrics at a glance |
+
+**Stack:** Python 3.12 • FastAPI • SQLModel • PostgreSQL 16 • Redis • Docker • AWS • GitHub Actions
+
+---
+
+### E-Commerce Backend API
+[`jerryszc/ecommerce-backend-api`](https://github.com/jerryszc/ecommerce-backend-api) — Commercial management backend preventing inventory inconsistencies and order processing errors.
+
+| Aspect | Implementation |
+|--------|----------------|
+| **Core Domain** | Product catalog, order management, inventory tracking with transactional guarantees |
+| **Architecture** | Clean architecture, automated migrations (Alembic), strict schema validation |
+| **Reliability** | Transactional consistency, strict schema validation (Pydantic/SQLModel), 34 tests passing |
+| **Infrastructure** | Docker Compose for environment parity, containerized deployment ready |
+
+---
+
+### SSO Webhook Service
+[`jerryszc/sso-webhook-service`](https://github.com/jerryszc/sso-webhook-service) — Centralized authentication with guaranteed event delivery.
+
+| Aspect | Implementation |
+|--------|----------------|
+| **Core Domain** | SSO authentication + async webhook delivery with HMAC signatures |
+| **Reliability** | Resilient retries with exponential backoff, dead-letter queue for failed deliveries |
+| **Security** | Zero-trust architecture, HMAC signatures, JWT + rate limiting, strict typing (mypy strict) |
+| **Testing** | 16 tests passing, containerized smoke tests, CI green |
+
+---
+
+### Realtime Task API
+[`jerryszc/Realtime-task-api`](https://github.com/jerryszc/Realtime-task-api) — Real-time collaborative task management with strict access control.
+
+| Aspect | Implementation |
+|--------|----------------|
+| **Core Domain** | Workspaces, boards, tasks with real-time WebSocket updates |
+| **Access Control** | JWT authentication, RBAC (owner/admin/member) across workspaces/boards/tasks |
+| **Real-time** | Native WebSocket broadcasting with connection management |
+| **Testing** | 11 tests passing, 76% coverage, CI green |
+
+---
+
+## Technical Focus Areas
+
+| Area | What I Focus On |
+|------|-----------------|
+| **API Design** | RESTful contracts, OpenAPI-first, Pydantic validation, versioning strategy |
+| **Database** | PostgreSQL advanced (CTEs, window functions, advisory locks); SQLModel/SQLAlchemy; Alembic migrations |
+| **Distributed Systems** | Event-driven patterns, idempotency keys, saga basics, eventual consistency |
+| **Observability** | Structured logging (request IDs, structured context), RED metrics, health endpoints, distributed tracing basics |
+| **Reliability** | Idempotency keys, retries with backoff, circuit breaker patterns, graceful degradation |
+| **Security** | JWT rotation, bcrypt, rate limiting, OWASP headers, secret management (no plaintext in code) |
+| **Developer Experience** | LocalStack for zero-cost AWS parity, pre-commit hooks, type-safe code (MyPy strict) |
+
+---
+
+## Engineering Philosophy
+
+- **Correctness over cleverness** — boring code that works beats clever code that surprises
+- **Observability first** — if you can't see it, you can't fix it
+- **Operational ownership** — you build it, you run it, you instrument it
+- **Iterate on feedback** — ship small, measure, learn, repeat
+
+---
 
 ## Core Stack — Tools with Purpose
 
@@ -19,26 +102,20 @@ I build Python APIs that protect business logic, automate critical operations, a
 | **Pytest** | Automated tests for business logic and edge cases | Secure deployments, zero regressions |
 | **Git** | Clean and traceable version control | Frictionless collaboration and auditability |
 
-## 🚀 Portfolio Projects
+---
 
-All three ship with green CI: `ruff` + `mypy strict` + `pytest` + Docker build & smoke test.
+## Quality Standards
 
-* **[E-Commerce Backend API](https://github.com/jerryszc/ecommerce-backend-api)** — 34 pytest passing, CI green
-  * **Problem it solves:** Automates commercial management, preventing inventory inconsistencies, order processing errors, and production crashes through a robust, containerized architecture.
-  * **Stack:** FastAPI, PostgreSQL, SQLModel, Alembic, Docker, and Pytest.
-  * **Enfoque:** Clean architecture, automated database migrations, strict schema validation, and environment parity with Docker Compose.
+All projects ship with green CI: `ruff` + `mypy strict` + `pytest` + Docker build & smoke test.
 
-* **[SSO Webhook Service](https://github.com/jerryszc/sso-webhook-service)** — 16 pytest passing, CI green
-  * **Problem it solves:** Centralizes authentication (SSO) and guarantees event delivery through asynchronous webhooks with HMAC signatures, resilient retries, and a dead-letter queue.
-  * **Stack:** FastAPI, PostgreSQL, Redis, SQLModel, Alembic, Docker, and Pytest.
-  * **Enfoque:** Zero-trust security, strict typing (`mypy strict`), JWT + rate limiting, and containerized smoke tests.
+---
 
-* **[Realtime Task API](https://github.com/jerryszc/Realtime-task-api)** — 11 pytest passing, 76% coverage, CI green
-  * **Problem it solves:** Enables real-time collaborative task management with strict access control across workspaces, boards, and tasks.
-  * **Stack:** FastAPI, PostgreSQL, SQLModel, WebSockets, RBAC, Docker, and Pytest.
-  * **Enfoque:** JWT authentication, owner/admin/member RBAC, native WebSocket broadcasting, and automated coverage.
+## Contact
 
-## 📈 Let's Connect
-* GitHub: [@jerryszc](https://github.com/jerryszc)
-* LinkedIn: [Jhosbert Osorio](https://www.linkedin.com/in/jhosbert-osorio-2680913b5)
-* Email: [Jhosbertosorio@gmail.com](mailto:Jhosbertosorio@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin)](https://www.linkedin.com/in/jhosbert-osorio-2680913b5)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github)](https://github.com/jerryszc)
+[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail)](mailto:Jhosbertosorio@gmail.com)
+
+---
+
+> *"Simplicity is the soul of efficiency."* — Austin Freeman
