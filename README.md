@@ -64,7 +64,7 @@ equipo de operaciones, no el usuario final.
 está escrito (`app/services/aws_sqs.py`), pero nadie lo invierte todavía: lo que falta es
 decidir si lo ejecuta un Lambda o un worker en ECS.
 
-**Cobertura: 81.67%.** CI con PostgreSQL 16, Redis 7 y LocalStack como servicios.
+**Cobertura: 81.74%.** CI con PostgreSQL 16, Redis 7 y LocalStack como servicios.
 
 ---
 
@@ -252,7 +252,7 @@ uses it, not the end customer.
 written (`app/services/aws_sqs.py`) but nothing calls it yet, so what is left is deciding
 whether a Lambda or an ECS worker runs it.
 
-**Coverage: 81.67%.** CI with PostgreSQL 16, Redis 7 and LocalStack as services.
+**Coverage: 81.74%.** CI with PostgreSQL 16, Redis 7 and LocalStack as services.
 
 ---
 
