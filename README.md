@@ -35,7 +35,7 @@ cada problema tiene un test con nombre que lo demuestra.
 |:---|:---|:---|
 | [Inventory Automator](https://github.com/jerryszc/ecommerce-inventory-automator) | 75 | El stock diverge entre marketplaces y nadie sabe cuál es el real. Amazon marca 10, Shopify marca 8, y cada uno penaliza al vendedor por la diferencia |
 | [SSO + Webhook Dispatcher](https://github.com/jerryszc/sso-webhook-service) | 16 | Un evento de integración se pierde si el receptor está caído, o se martilea si reintentas sin parar. Aquí hay backoff, cola de muertos e idempotencia obligatoria |
-| [E-Commerce Backend API](https://github.com/jerryszc/ecommerce-backend-api) | 34 | Dos clientes compran la última unidad a la vez y ambos reciben su pedido. Resuelto con bloqueo de fila por producto |
+| [E-Commerce Backend API](https://github.com/jerryszc/ecommerce-backend-api) · **[en vivo](https://ecommerce-backend-api-sh6c.onrender.com/health)** | 34 | Dos clientes compran la última unidad a la vez y ambos reciben su pedido. Resuelto con bloqueo de fila por producto |
 | [Realtime Task API](https://github.com/jerryszc/Realtime-task-api) | 11 | Dos personas toman la misma tarea porque el tablero solo se actualiza al recargar. Resuelto con push por WebSocket en vez de polling |
 
 Los cuatro están ordenados por fuerza de evidencia, no por cuándo los escribí. Cada
@@ -97,9 +97,16 @@ y el rate limiting dependen de que Redis se comporte como en producción.
 ## 3. E-Commerce Backend API — Inventory & Orders
 
 [`jerryszc/ecommerce-backend-api`](https://github.com/jerryszc/ecommerce-backend-api) ·
-**34 tests** · Python 3.11 · FastAPI · SQLModel · PostgreSQL 15 · Alembic
+**34 tests** · Python 3.11 · FastAPI · SQLModel · PostgreSQL 15 · Alembic ·
+**En producción:** <https://ecommerce-backend-api-sh6c.onrender.com/health>
 
-Backend transaccional: el núcleo de pedidos e inventario de una tienda online.
+Backend transaccional: el núcleo de pedidos e inventario de una tienda online. Desplegado en
+Render con su propia base de datos, en plan gratuito.
+
+> Comprobado contra la instancia en vivo, no solo en local: un pedido de 2 unidades bajó el
+> stock de 4 a 2 y registró el kardex (`-2`, `OUT`, resultante 2). Un pedido de 999 unidades
+> devolvió **400** y el stock siguió en 2. Esa es la garantía de atomicidad, medida en
+> producción.
 
 | Problema | Solución | Evidencia |
 |:---|:---|:---|
@@ -223,7 +230,7 @@ problem has a specifically named test that proves it.
 |:---|:---|:---|
 | [Inventory Automator](https://github.com/jerryszc/ecommerce-inventory-automator) | 75 | Stock drifts between marketplaces and nobody knows which number is real. Amazon says 10, Shopify says 8, and each penalises the seller for the difference |
 | [SSO + Webhook Dispatcher](https://github.com/jerryszc/sso-webhook-service) | 16 | An integration event is lost if the receiver is down, or hammered if you retry forever. Here there is backoff, a dead-letter queue and mandatory idempotency |
-| [E-Commerce Backend API](https://github.com/jerryszc/ecommerce-backend-api) | 34 | Two customers buy the last unit at the same time and both get their order. Solved with per-product row locking |
+| [E-Commerce Backend API](https://github.com/jerryszc/ecommerce-backend-api) · **[live](https://ecommerce-backend-api-sh6c.onrender.com/health)** | 34 | Two customers buy the last unit at the same time and both get their order. Solved with per-product row locking |
 | [Realtime Task API](https://github.com/jerryszc/Realtime-task-api) | 11 | Two people pick up the same task because the board only updates on refresh. Solved with WebSocket push instead of polling |
 
 Ordered by strength of evidence, not by when I wrote them. Each repository has a **Use case**
@@ -285,9 +292,16 @@ and rate limiting depend on Redis behaving as it does in production.
 ## 3. E-Commerce Backend API — Inventory & Orders
 
 [`jerryszc/ecommerce-backend-api`](https://github.com/jerryszc/ecommerce-backend-api) ·
-**34 tests** · Python 3.11 · FastAPI · SQLModel · PostgreSQL 15 · Alembic
+**34 tests** · Python 3.11 · FastAPI · SQLModel · PostgreSQL 15 · Alembic ·
+**Live:** <https://ecommerce-backend-api-sh6c.onrender.com/health>
 
-Transactional backend: the order and inventory core of an online store.
+Transactional backend: the order and inventory core of an online store. Deployed on Render
+with its own database, on the free tier.
+
+> Checked against the running instance, not only locally: an order of 2 units moved stock
+> from 4 to 2 and wrote the kardex entry (`-2`, `OUT`, resulting 2). An order of 999 units
+> returned **400** and the stock stayed at 2. That is the atomicity guarantee, measured in
+> production.
 
 | Problem | Solution | Evidence |
 |:---|:---|:---|
