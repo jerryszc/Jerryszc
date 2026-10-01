@@ -14,17 +14,19 @@ fiable y la frontera de confianza.
 
 ## Busco
 
-**Backend Developer remoto, trabajando en español, disponible para medio tiempo.** Tardes y
-noches entre semana, ~25-30 horas. Busco también contratos por proyecto o consultoría
-puntual, que es la vía más rápida para entrar a un equipo y aprender en producción.
+**Backend Developer remoto, trabajando en español.** Disponible para **tiempo completo** o
+medio tiempo (~25-30 horas: tardes y noches entre semana). Busca también contratos por
+proyecto o consultoría puntual, que es la vía más rápida para entrar a un equipo y aprender en
+producción.
 
 Cuatro sistemas de backend completos, **136 tests automatizados en verde** (75 + 34 + 16 + 11),
 MyPy estricto y CI que corre lint, typecheck, tests y build de Docker en los cuatro
 repositorios.
 
 **Estudio Ingeniería Informática** (inicio septiembre 2026, grado previsto agosto de 2030) y
-trabajo en paralelo. Busco un equipo donde el código que escribo llegue a producción y pueda
-aprender de quien lleva más años haciéndolo.
+trabajo en paralelo. Puedo dedicarle jornada completa o media según el equipo; si la oferta es
+de tiempo completo, puedo hacerlo. Busco un equipo donde el código que escribo llegue a
+producción y pueda aprender de quien lleva más años haciéndolo.
 
 Cuando el proyecto lo permita, también trabajo por proyecto:
 
@@ -206,6 +208,9 @@ Nacional Bolivariana (UNEFA), Caracas, Venezuela.**
 
 **Septiembre 2026 – agosto 2030.** Grado previsto agosto de 2030. Estudio mientras trabajo, y por
 eso mi cronología profesional empieza en paralelo y no antes.
+
+Puedo dedicarle jornada completa o media según el equipo: si la oferta es de tiempo completo,
+puedo hacerlo.
 
 **Formación previa:** Bachillerato general, 2020 – 2025.
 
