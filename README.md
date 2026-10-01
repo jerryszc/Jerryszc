@@ -1,6 +1,6 @@
 ﻿# Jhosbert Osorio
 
-**Consultor Backend — Python · FastAPI · PostgreSQL · WebSockets · AWS**
+**Backend Developer — Python · FastAPI · PostgreSQL · WebSockets · AWS**
 
 Construyo APIs de backend donde lo difícil no es el CRUD: es la concurrencia, la entrega
 fiable y la frontera de confianza.
@@ -14,18 +14,19 @@ fiable y la frontera de confianza.
 
 ## Busco
 
-**Consultor backend freelance para contratos por proyecto, remoto, trabajando en español.**
-**Disponible inmediatamente**, sin esperar a terminar la carrera.
+**Backend Developer remoto, trabajando en español, disponible para medio tiempo.** Tardes y
+noches entre semana, ~25-30 horas. Busco también contratos por proyecto o consultoría
+puntual, que es la vía más rápida para entrar a un equipo y aprender en producción.
 
 Cuatro sistemas de backend completos, **136 tests automatizados en verde** (75 + 34 + 16 + 11),
 MyPy estricto y CI que corre lint, typecheck, tests y build de Docker en los cuatro
 repositorios.
 
-**No busco un puesto junior.** Estudio Ingeniería Informática (4 años, grado en agosto de 2030)
-y eso me cierra las puertas de un empleo full-time, así que ofrezco lo que un consultancy
-contrata: un sistema de backend con tests, CI y despliegue, entregado en un plazo acordado.
+**Estudio Ingeniería Informática** (inicio septiembre 2026, grado previsto agosto de 2030) y
+trabajo en paralelo. Busco un equipo donde el código que escribo llegue a producción y pueda
+aprender de quien lleva más años haciéndolo.
 
-Lo que ofrezco, con el precio y el plazo acordados antes de empezar:
+Cuando el proyecto lo permita, también trabajo por proyecto:
 
 | Servicio | Qué incluye |
 |:---|:---|
@@ -38,9 +39,6 @@ Lo que ofrezco, con el precio y el plazo acordados antes de empezar:
 
 Todo lo que afirmo en este README está en el código. Si algo no lo he construido, lo digo
 abajo en vez de dejarlo fuera.
-
-> Estudiando Ingeniería Informática hasta agosto de 2030. Busco contratos, proyectos por
-> plazo y medio tiempo; no plazas de planta, porque no puedo comprometer 40 horas semanales.
 
 ---
 
@@ -206,8 +204,8 @@ El último paso es el que más importa: no basta con que la imagen **construya**
 **Ingeniería Informática — Universidad Nacional Experimental Politécnica de la Fuerza Armada
 Nacional Bolivariana (UNEFA), Caracas, Venezuela.**
 
-**Septiembre 2026 – agosto 2030.** Grado previsto agosto de 2030. Estudiando mientras trabajo
-en contratos freelance, que es la razón por la que esto no aparece primero en mi cronología.
+**Septiembre 2026 – agosto 2030.** Grado previsto agosto de 2030. Estudio mientras trabajo, y por
+eso mi cronología profesional empieza en paralelo y no antes.
 
 **Formación previa:** Bachillerato general, 2020 – 2025.
 
