@@ -1,28 +1,46 @@
-# Jhosbert Osorio
+﻿# Jhosbert Osorio
 
-**Backend Developer — Python · FastAPI · PostgreSQL · WebSockets · AWS**
+**Consultor Backend — Python · FastAPI · PostgreSQL · WebSockets · AWS**
 
 Construyo APIs de backend donde lo difícil no es el CRUD: es la concurrencia, la entrega
 fiable y la frontera de confianza.
-[this README also in English →](#english)
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github)](https://github.com/jerryszc)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin)](https://www.linkedin.com/in/jhosbert-osorio-2680913b5)
 [![Email](https://img.shields.io/badge/Email-D14836?logo=gmail)](mailto:Jhosbertosorio@gmail.com)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?logo=whatsapp)](https://wa.me/584125993061)
 
 ---
 
 ## Busco
 
-**Backend Developer junior, remoto, trabajando en español.** Disponible desde octubre de 2026,
-que es cuando grado.
+**Consultor backend freelance para contratos por proyecto, remoto, trabajando en español.**
+**Disponible inmediatamente**, sin esperar a terminar la carrera.
 
-Cuatro sistemas de backend completos en unos dos meses, **136 tests automatizados en verde**
-(75 + 34 + 16 + 11), MyPy estricto y CI que corre lint, typecheck, tests y build de Docker en
-los cuatro repositorios.
+Cuatro sistemas de backend completos, **136 tests automatizados en verde** (75 + 34 + 16 + 11),
+MyPy estricto y CI que corre lint, typecheck, tests y build de Docker en los cuatro
+repositorios.
+
+**No busco un puesto junior.** Estudio Ingeniería Informática (4 años, grado en agosto de 2030)
+y eso me cierra las puertas de un empleo full-time, así que ofrezco lo que un consultancy
+contrata: un sistema de backend con tests, CI y despliegue, entregado en un plazo acordado.
+
+Lo que ofrezco, con el precio y el plazo acordados antes de empezar:
+
+| Servicio | Qué incluye |
+|:---|:---|
+| API REST desde cero | FastAPI o Django, PostgreSQL, Alembic, Docker, documentación OpenAPI |
+| Auditoría de concurrencia | Detectar sobreventa, condición de carrera y transacciones que no son atómicas |
+| Integración con servicios de terceros | Webhooks firmados, reintentos con backoff, idempotencia obligatoria |
+| Autenticación y roles | JWT con rotación, RBAC, rate limiting, hash de contraseñas |
+| Migración a FastAPI | Convertir una API existente sin romper el contrato de los clientes |
+| Auditoría de un proyecto | Tests que faltan, deuda técnica priorizada, plan por fases |
 
 Todo lo que afirmo en este README está en el código. Si algo no lo he construido, lo digo
 abajo en vez de dejarlo fuera.
+
+> Estudiando Ingeniería Informática hasta agosto de 2030. Busco contratos, proyectos por
+> plazo y medio tiempo; no plazas de planta, porque no puedo comprometer 40 horas semanales.
 
 ---
 
@@ -185,211 +203,26 @@ El último paso es el que más importa: no basta con que la imagen **construya**
 
 ## Educación
 
-**Ingeniería Informática (B.Sc. Computer Engineering) — Universidad Nacional Experimental
-Politécnica de la Fuerza Armada Nacional Bolivariana (UNEFA), Caracas, Venezuela.**
+**Ingeniería Informática — Universidad Nacional Experimental Politécnica de la Fuerza Armada
+Nacional Bolivariana (UNEFA), Caracas, Venezuela.**
 
-**2022 – octubre 2026.** Graduación prevista octubre de 2026.
+**Septiembre 2026 – agosto 2030.** Grado previsto agosto de 2030. Estudiando mientras trabajo
+en contratos freelance, que es la razón por la que esto no aparece primero en mi cronología.
 
----
-
-<a name="english"></a>
-
-# English
-
-**Backend Developer — Python · FastAPI · PostgreSQL · WebSockets · AWS**
-
-I build backend APIs where the hard part is not the CRUD: it is concurrency, reliable delivery
-and the trust boundary.
-
-[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github)](https://github.com/jerryszc)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin)](https://www.linkedin.com/in/jhosbert-osorio-2680913b5)
-[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail)](mailto:Jhosbertosorio@gmail.com)
-
----
-
-## Looking for
-
-**Junior Backend Developer, remote, working in Spanish.** Available from October 2026, when I
-graduate.
-
-Four complete backend systems in about two months, **136 automated tests passing**
-(75 + 34 + 16 + 11), MyPy strict, and CI running lint, typecheck, tests and a Docker build on
-all four repositories.
-
-Everything I claim here is in the code. Anything I have not built, I list below instead of
-leaving it out.
-
----
-
-## What I do, and how I check it
-
-I do not list features. Each project is explained by **the problem it solves**, and each
-problem has a specifically named test that proves it.
-
-| Project | Tests | The problem it solves |
-|:---|:---|:---|
-| [Inventory Automator](https://github.com/jerryszc/ecommerce-inventory-automator) | 75 | Stock drifts between marketplaces and nobody knows which number is real. Amazon says 10, Shopify says 8, and each penalises the seller for the difference |
-| [SSO + Webhook Dispatcher](https://github.com/jerryszc/sso-webhook-service) | 16 | An integration event is lost if the receiver is down, or hammered if you retry forever. Here there is backoff, a dead-letter queue and mandatory idempotency |
-| [E-Commerce Backend API](https://github.com/jerryszc/ecommerce-backend-api) · **[live](https://ecommerce-backend-api-sh6c.onrender.com/health)** | 34 | Two customers buy the last unit at the same time and both get their order. Solved with per-product row locking |
-| [Realtime Task API](https://github.com/jerryszc/Realtime-task-api) | 11 | Two people pick up the same task because the board only updates on refresh. Solved with WebSocket push instead of polling |
-
-Ordered by strength of evidence, not by when I wrote them. Each repository has a **Use case**
-section explaining where the service fits in a real company and what is missing before
-production.
-
----
-
-## 1. E-Commerce Multi-Channel Inventory & Operations Automator
-
-[`jerryszc/ecommerce-inventory-automator`](https://github.com/jerryszc/ecommerce-inventory-automator) ·
-**75 tests** · Python 3.12 · FastAPI · SQLModel · PostgreSQL 16 · Redis · AWS
-
-The integration layer between a business's ERP and the marketplaces it sells on. Operations
-uses it, not the end customer.
-
-| Problem | Solution | Evidence |
-|:---|:---|:---|
-| Stock drifts between channels and each marketplace penalises the seller | Last-write-wins sync with an immutable `ConflictLog` of every discrepancy | `app/services/sync.py`, 18 sync and import tests |
-| Every supplier sends CSV with different column names | Parser with an alias table in Spanish and English, catalogue auto-creation, deduplication | `data/samples/messy_sample.csv` processes valid rows and reports `error_rows[]` |
-| A heavy upload blocks the API | S3 → SQS → worker pattern | `test_aws.py` covers S3, SQS and Secrets Manager against LocalStack |
-| Nobody knows who changed what | JSON logs with `request_id`, Prometheus metrics, health checks separating *alive* from *ready* | 6 observability tests |
-| Anyone can write data | JWT with refresh rotation, `admin`/`operator` RBAC, distributed rate limiting | 9 extended auth tests |
-
-**What is missing, stated here:** the queue consumer does not exist. `process_import_job` is
-written (`app/services/aws_sqs.py`) but nothing calls it yet, so what is left is deciding
-whether a Lambda or an ECS worker runs it.
-
-**Coverage: 81.74%.** CI with PostgreSQL 16, Redis 7 and LocalStack as services.
-
----
-
-## 2. SSO Auth Service & Webhook Dispatcher
-
-[`jerryszc/sso-webhook-service`](https://github.com/jerryszc/sso-webhook-service) ·
-**16 tests** · Python 3.12 · FastAPI async · SQLAlchemy async · PostgreSQL 16 · Redis 7 ·
-Argon2id · PyJWT
-
-OAuth2 identity plus an HMAC-signed webhook dispatcher. They ship together because they share
-a need for auditing and cryptographic signing.
-
-| Problem | Solution | Evidence |
-|:---|:---|:---|
-| An event is lost if the receiver is down, or hammered by endless retries | 5 attempts with exponential backoff (2s, 4s, 8s, 16s, 32s) and a DLQ with manual retry | `test_backoff_growth` |
-| A retry after a timeout charges twice | Mandatory `Idempotency-Key`; without it, 422 | `test_webhook_publish_idempotent` |
-| The receiver cannot verify the message is authentic | HMAC-SHA256 over canonical JSON with sorted keys | `test_hmac_signature` |
-| A stolen refresh token works forever | Rotation on every use with `rotated_from_jti`, plus a Redis blacklist by `jti` | `test_register_login_me_refresh_logout` |
-| No way to know who accessed what | `audit_log` with configurable retention (90 days by default) | 3 dedicated audit tests |
-
-**What is missing:** the rate limiter is deliberately fail-open. If Redis goes down the limit
-is not applied. It is a conscious decision and its cost is that a Redis outage removes the
-brute-force defence; it is compensated at the load balancer.
-
-**CI against real PostgreSQL 16 and Redis 7**, not SQLite or mocks, because token rotation
-and rate limiting depend on Redis behaving as it does in production.
-
----
-
-## 3. E-Commerce Backend API — Inventory & Orders
-
-[`jerryszc/ecommerce-backend-api`](https://github.com/jerryszc/ecommerce-backend-api) ·
-**34 tests** · Python 3.11 · FastAPI · SQLModel · PostgreSQL 15 · Alembic ·
-**Live:** <https://ecommerce-backend-api-sh6c.onrender.com/health>
-
-Transactional backend: the order and inventory core of an online store. Deployed on Render
-with its own database, on the free tier.
-
-> Checked against the running instance, not only locally: an order of 2 units moved stock
-> from 4 to 2 and wrote the kardex entry (`-2`, `OUT`, resulting 2). An order of 999 units
-> returned **400** and the stock stayed at 2. That is the atomicity guarantee, measured in
-> production.
-
-| Problem | Solution | Evidence |
-|:---|:---|:---|
-| Two customers buy the last unit and both get their order | `SELECT ... FOR UPDATE` per product: the second waits for the first | `test_order_multi_line_atomic_rollback` |
-| An order that fails halfway leaves stock deducted with no order saved | One transaction for every line, with rollback | `test_order_insufficient_stock_single_line_rolls_back` |
-| Stock changes and nobody knows why | Kardex: quantity, reason, resulting stock and the order that caused it | `test_adjust_increases_stock_and_kardex` |
-| Floating point money produces rounding errors | `Decimal` with explicit `max_digits` and `decimal_places` | Validated in the schema and the response models |
-
-**What is missing:** there is no authentication. It is the simplest of the four in that
-respect, and it is documented as a limitation in the README rather than omitted. PostgreSQL is
-required by design: row locking is the guarantee, and SQLite does not implement it the same
-way.
-
-**Coverage floor: 80%. MyPy strict.**
-
----
-
-## 4. Realtime Task API — Collaborative Boards
-
-[`jerryszc/Realtime-task-api`](https://github.com/jerryszc/Realtime-task-api) ·
-**11 tests** · Python 3.11 · FastAPI · WebSockets · SQLModel · PostgreSQL 16
-
-Collaborative boards with real-time push, workspace-scoped rooms and three-role RBAC.
-
-| Problem | Solution | Evidence |
-|:---|:---|:---|
-| Two people pick up the same task because the board does not update | WebSocket push: `task.created`, `task.updated`, `task.moved`, `task.deleted` | `test_manager_board_and_workspace_rooms` |
-| A broadcast bug leaks data between clients of a multi-tenant SaaS | Explicitly prefixed rooms, `board:{id}` and `workspace:{id}` | 3 WebSocket tests |
-| A long-lived connection skips authorisation if it is only checked on the HTTP handshake | Authorisation re-checked **on the WebSocket**, closing 4401 (no credential) and 4403 (no permission) | `test_ws_rejects_missing_token` |
-| A database leak hands over valid sessions | Refresh tokens stored as SHA-256, never in plaintext | `test_token_roundtrip` |
-
-**What is missing, and it is the most important thing:** the `ConnectionManager` is an
-in-process dictionary. With two replicas each notifies only its own clients, so a user
-connected to replica A does not see what happens on B. The fix is Redis Pub/Sub, and it is
-the first thing I would change.
-
-It is the project with the fewest tests of the four. I say so here rather than hide it.
-**Coverage floor: 70%.**
-
----
-
-## How I work
-
-Only what is present in the code of the repositories above.
-
-| Area | In practice |
-|:---|:---|
-| **Concurrency** | Pessimistic row locking (`SELECT ... FOR UPDATE`), explicit commit/rollback transactions, WebSocket rooms |
-| **Integration reliability** | Mandatory idempotency keys, exponential backoff, dead-letter queue with manual retry, HMAC-SHA256 signatures |
-| **Identity and access** | JWT with rotation and revocation, Argon2id and bcrypt, 2- and 3-role RBAC, per-IP and per-scope rate limiting, TTL blacklists |
-| **Data** | PostgreSQL with Alembic, `Decimal` for money, inventory kardex, model-level indexes and constraints |
-| **AWS** | S3, SQS and Secrets Manager via `boto3`, with LocalStack for zero-cost development and tests |
-| **Observability** | Structured JSON logs with `request_id`, Prometheus metrics, health checks separating *alive* from *ready for traffic* |
-| **Quality** | 136 tests, MyPy `strict`, Ruff, four-step CI, image build and a smoke test that verifies the app **responds** |
-
-### What I have not built yet
-
-I would rather say it:
-
-- Circuit breaker, saga, event sourcing — none implemented
-- Distributed tracing — no OpenTelemetry
-- CTEs, window functions, advisory locks — unused
-- Kubernetes, Terraform, Kafka, RabbitMQ, MySQL — no hands-on experience
-- API versioning: only the SSO project uses a `/api/v1` prefix; it is not a general pattern
-
-### Quality standards
-
-All four repositories run on every push and pull request: `ruff check`,
-`ruff format --check`, `mypy` in strict mode, `pytest` with a coverage gate (80%, 70% and 80%
-depending on the project), and a Docker image build with a smoke test that brings the stack
-up and checks `/health` with `curl -f`.
-
-The last step matters most: an image building is not enough, it has to **start and respond**
-in a clean environment.
-
----
-
-## Education
-
-**B.Sc. in Computer Engineering — Universidad Nacional Experimental Politécnica de la
-Fuerza Armada Nacional Bolivariana (UNEFA), Caracas, Venezuela.**
-
-2022 – October 2026, graduating October 2026.
+**Formación previa:** Bachillerato general, 2020 – 2025.
 
 ---
 
 ## Contact
 
-[![GitHub](https://img.shields.io/badge/GitHub-181717?logo=github)](https://github.com/jerryszc)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?logo=linkedin)](https://www.linkedin.com/in/jhosbert-osorio-2680913b5)
-[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail)](mailto:Jhosbertosorio@gmail.com)
+**Caracas, Venezuela · remoto · trabajando en español**
+
+| | |
+|:---|:---|
+| **Email** | [Jhosbertosorio@gmail.com](mailto:Jhosbertosorio@gmail.com) |
+| **WhatsApp** | [+58 412-5993061](https://wa.me/584125993061) |
+| **LinkedIn** | [linkedin.com/in/jhosbert-osorio-2680913b5](https://www.linkedin.com/in/jhosbert-osorio-2680913b5) |
+| **GitHub** | [github.com/jerryszc](https://github.com/jerryszc) |
+
+Si tienes un backend que necesita concurrencia correcta, tests o un despliegue, escríbeme con
+el problema — no con la lista de technologies. Te respondo en español.
